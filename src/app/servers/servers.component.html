@@ -1,0 +1,8 @@
+<p>servers works!</p>
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+<button class="button btn-primary" [disabled]="!allowCreateServer" (click)="onCreateServer()">Add Server</button>
+<div *ngFor="let server of servers; let i = index">
+    <!-- <app-server></app-server> -->
+    <p [ngStyle]="{backgroundColor: i > 1? 'green': 'red'}">server {{server.serverId}} - {{server.serverName}} is {{server.serverStatus}}!</p>
+
+</div>
